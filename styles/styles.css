@@ -1,0 +1,271 @@
+body {
+  margin: 0; /* "сброс стиля" чтобы браузер не добавил ничего сам */
+  background-color: #1e1e1e; /* изменение цвета фона страницы */
+  font-family: Inter, sans-serif; /* выбираем шрифт для боди, т.е. всему + дополнительный шрифт на всякий случай */
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+/* сбросили стили, которые бы автоматически добавил браузер */
+
+.content-section {
+  box-sizing: border-box;
+  /* свойство, которое помогает не сломать блоки при прописанных отступах у каждого (отступы будут внутри блока) */
+  width: 100%;
+  max-width: 360px;
+  min-height: 100px;
+  margin: auto; /* центрирование страницы */
+}
+/* добавили класс для стилизации крупных блоков */
+
+.content-section_theme_dark {
+  color: #fff;
+  /* белый цвет текста на темном фоне */
+  background-color: #131313;
+}
+/* стиль для фона, чтобы добавлять новые секции, если будет нужно */
+
+.content-section_theme_bright {
+  color: #131313;
+  /* черный цвет текста на желтом фоне */
+  background-color: #fee42a;
+}
+
+/* секция с шапкой сайта */
+
+header {
+  padding: 24px 20px;
+  /* отступы (в фигме всё так же) */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* далее - отдельные классы для выделения активной ссылки */
+.header_logo {
+  display: block;
+  width: 78px;
+}
+.header_logo-image {
+  width: 100%;
+  /* ширина изображение зависит от ширины ссылки */
+}
+.header_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+.header_menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+.header_menu-item {
+}
+.header_menu-item_active .header_menu-link {
+  /* с помощью "вложенности" убираем подчеркивание - когда меню линк вложен в итем актив*/
+  text-decoration: none;
+}
+.header_menu-link {
+  color: #f5f5f5;
+  font-size: 16px;
+  line-height: 120%; /* 120% */
+}
+/* закончили с шапкой сайта */
+/* секция с заголовком сайта */
+.cover {
+  padding: 7px 24px 32px 20px;
+  min-height: 258px;
+  background-image: url(/images/cover.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 105% auto;
+}
+
+.cover_title {
+  /* буквы заголовка сайта С ЧИСТОГО ЛИСТА */
+  width: 100%;
+  color: #fff;
+  font-family: "EB Garamond", serif;
+  font-size: 72px;
+  font-style: normal;
+  line-height: 72px; /* 72px */
+}
+
+.accent-span {
+  display: block;
+  /* перенос текста */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+/* закончили с заголовком сайта */
+/* секция интро */
+.intro {
+  padding: 0 20px 38px;
+}
+
+.intro_heading {
+  color: #cccccc;
+  display: flex;
+  justify-content: space-between;
+  gap: 22px;
+  font-size: 16px;
+}
+
+.intro_title {
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.intro_date {
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 120%;
+}
+
+.intro_main-text {
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  gap: 24px;
+  margin-top: 24px;
+  /* отступ с помощью марджин (ибо у родителя нет флекса) */
+  line-height: 135%; /* 135% */
+}
+/* закончили с интро */
+/* сексция с reasons */
+.reasons {
+  padding: 40px 20px;
+}
+.content-section_subtitle {
+  font-family: "EB Garamond";
+  width: 320px;
+  font-weight: 500;
+  font-size: 28px;
+}
+.content-section_introduction {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-family: Inter;
+  font-size: 20px;
+  line-height: 135%;
+}
+.content-section_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  line-height: 135%;
+  padding: 0 0 0 16px;
+}
+.content-section_list-item {
+}
+.content-section_list-accent {
+  font-weight: 700;
+}
+/* закончили с reasons */
+/* секция с how-to */
+.how-to {
+  padding: 40px 20px 60px;
+}
+
+.cards-list {
+  /* убираем булиты и добавляем расстояние между карточек  */
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style: none;
+}
+.card {
+  border-radius: 30px;
+  /* округление карточек */
+  padding: 20px;
+}
+
+.card_theme_dark {
+  color: #f5f5f5;
+  background-color: #343434;
+}
+.card_theme_bright {
+  color: #141414;
+  background-color: #fee42a;
+}
+.card_author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.card_author-photo {
+  width: 100px;
+  height: 100px;
+}
+
+.card_author-name {
+  width: 163px;
+  height: 20px;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 135%;
+  text-align: center;
+}
+
+.card_content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+.card_title {
+  font-family: "EB Garamond";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 135%;
+  margin-top: 8px;
+}
+.card_text {
+  /* margin-top: 8px; */
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 135%;
+}
+/* закончили с карточками */
+/* подвал */
+.footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #fee42a;
+  width: 360px;
+}
+.footer_copy {
+  color: #f5f5f5;
+  font-size: 16px;
+  line-height: 135%;
+  text-decoration: none;
+}
+.footer_links {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+}
