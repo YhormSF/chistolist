@@ -1,8 +1,8 @@
 body {
   margin: 0; /* "сброс стиля" чтобы браузер не добавил ничего сам */
-  background-color: #1e1e1e; /* изменение цвета фона страницы */
   font-family: Inter, sans-serif; /* выбираем шрифт для боди, т.е. всему + дополнительный шрифт на всякий случай */
   font-weight: 400;
+  background-color: #1e1e1e; /* изменение цвета фона страницы */
 }
 h1,
 h2,
@@ -45,11 +45,11 @@ blockquote {
 /* секция с шапкой сайта */
 
 header {
-  padding: 24px 20px;
   /* отступы (в фигме всё так же) */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding: 24px 20px;
 }
 /* далее - отдельные классы для выделения активной ссылки */
 .header_logo {
@@ -86,9 +86,9 @@ header {
 /* закончили с шапкой сайта */
 /* секция с заголовком сайта */
 .cover {
-  padding: 7px 24px 32px 20px;
   min-height: 258px;
-  background-image: url(/images/cover.svg);
+  padding: 7px 24px 32px 20px;
+  background-image: url(../images/cover.svg);
   background-repeat: no-repeat;
   background-position: right center;
   background-size: 105% auto;
@@ -123,10 +123,10 @@ header {
 }
 
 .intro_heading {
-  color: #cccccc;
   display: flex;
   justify-content: space-between;
   gap: 22px;
+  color: #cccccc;
   font-size: 16px;
 }
 
@@ -136,18 +136,18 @@ header {
 }
 
 .intro_date {
-  white-space: nowrap;
   font-size: 16px;
   line-height: 120%;
+  white-space: nowrap;
 }
 
 .intro_main-text {
-  color: #f5f5f5;
   display: flex;
   flex-direction: column;
-  font-size: 16px;
   gap: 24px;
   margin-top: 24px;
+  color: #f5f5f5;
+  font-size: 16px;
   /* отступ с помощью марджин (ибо у родителя нет флекса) */
   line-height: 135%; /* 135% */
 }
@@ -157,8 +157,8 @@ header {
   padding: 40px 20px;
 }
 .content-section_subtitle {
-  font-family: "EB Garamond";
   width: 320px;
+  font-family: "EB Garamond";
   font-weight: 500;
   font-size: 28px;
 }
@@ -173,8 +173,8 @@ header {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  line-height: 135%;
   padding: 0 0 0 16px;
+  line-height: 135%;
 }
 .content-section_list-item {
 }
@@ -223,8 +223,8 @@ header {
   width: 163px;
   height: 20px;
   font-family: Inter;
-  font-size: 16px;
   font-weight: 700;
+  font-size: 16px;
   line-height: 135%;
   text-align: center;
 }
@@ -236,11 +236,11 @@ header {
   gap: 8px;
 }
 .card_title {
-  font-family: "EB Garamond";
-  font-size: 22px;
-  font-weight: 500;
-  line-height: 135%;
   margin-top: 8px;
+  font-family: "EB Garamond";
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 135%;
 }
 .card_text {
   /* margin-top: 8px; */
@@ -251,12 +251,12 @@ header {
 /* закончили с карточками */
 /* подвал */
 .footer {
-  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid #fee42a;
   width: 360px;
+  border-top: 1px solid #fee42a;
+  padding: 20px;
 }
 .footer_copy {
   color: #f5f5f5;
